@@ -81,7 +81,16 @@ app.use(
 app.get('/rest/getAllUsers', (req, res) => {
   res.send(userData);
 });
-
+// REST endpoint to find a user by ID
+app.get('/rest/findUserById/:id', (req, res) => {
+  const userId = parseInt(req.params.id);
+  const user = userData.find((a) => a.id === userId);
+  if (user) {
+    res.send(user);
+  } else {
+    res.status(404).send('User not found');
+  }
+});
 app.listen(PORT, () => {
   console.log('Server running ');
 });
