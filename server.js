@@ -83,5 +83,5 @@ app.get('/rest/getAllUsers', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log('Server running fine');
+  console.log('Server running ');
 });
