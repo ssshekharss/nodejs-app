@@ -2,7 +2,7 @@ name: CICD
 
 on:
   push:
-    branches: [deploy-to-ecs-fargate]
+    branches: [deploy-to-ecs-fargate2]
 
 jobs:
   build-and-deploy:
